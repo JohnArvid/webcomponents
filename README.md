@@ -1,2 +1,2 @@
-# webcomponents
-Learning about webcomponents
+# web components
+Learning about web components
