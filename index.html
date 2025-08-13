@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script defer src="script.js"></script>
+	<script defer src="currentTime.js"></script>
 	<title>Web components</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 	</div>
 <script>
 	// testar matchMedia metoden på window-objektet
-	let media = window.matchMedia("(width<600px)");
+	let media = window.matchMedia("(orientation: landscape)");
 	console.log(media)
 	console.log(media.matches)
 </script>

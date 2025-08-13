@@ -1,14 +1,22 @@
 class CurrentTime extends HTMLElement {
     // The browser calls this method when the element is
     // added to the DOM.
-    connectedCallback() {
-        // Create a Date object representing the current date.
-        const tick = setInterval(()=>{
-			let now = new Date();
+    constructor() {
+        super()
+    }
 
-        	// Format the date to a human-friendly string, and set the
-			// formatted date as the text content of this element.
-        	this.textContent = now.toLocaleTimeString();
+    connectedCallback() {
+        // run tick every second
+        const shadow = this.attachShadow({ mode: "closed" });
+        const span = document.createElement("span");
+        shadow.appendChild(span)
+        const tick = setInterval(()=>{
+            // Create a Date object representing the current date.
+			  let now = new Date();
+
+        	// Format the time to a human-friendly string, and set the
+			    // formatted time as the text content of this element.
+        	span.textContent = now.toLocaleTimeString();
 		}, 1000 )
     }
 }
