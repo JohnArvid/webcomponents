@@ -9,5 +9,15 @@
 <body>
 	<my-component></my-component>
 	<current-date></current-date>
+	<current-time></current-time>
+	<div id="host">
+			<template shadowrootmode="open"><p class="text-string">En sträng</p></template>
+	</div>
+<script>
+	// testar matchMedia metoden på window-objektet
+	let media = window.matchMedia("(width<600px)");
+	console.log(media)
+	console.log(media.matches)
+</script>
 </body>
 </html>
